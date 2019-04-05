@@ -51,7 +51,7 @@ app.get('/weather', (req, res) => {
                 else {
                     const forecast = _data.summary + '. Current temprature is ' +
                     _data.temperature + ' ˚C. There is a ' + (_data.precipProbability*100) +
-                    '% chance of rain.';
+                    '% chance of rain. ' + 'Humidity is ' + (_data.humidity*100) + '%.';
                     res.send({
                         location,
                         forecast
